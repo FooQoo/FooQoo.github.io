@@ -40,15 +40,7 @@ module.exports = {
       ],
       copyright: [
         {
-          text: "Privacy Policy",
-          link: "https://policies.google.com/privacy?hl=en-US"
-        },
-        {
-          text: "MIT Licensed | Copyright © 2020-present FooQoo",
-          link: ""
-        },
-        {
-          text: "Powered by vuepress-theme-medium and vuepress-theme-meteorlxy and burst",
+          text: "Powered by awesome vuepress themes and burst",
           link: ""
         }
       ]
@@ -115,6 +107,14 @@ module.exports = {
     ]
 ],
   plugins: [
-    'geopattern'
+    'geopattern',
+    [
+      'vuepress-plugin-container',
+      {
+        type: 'tip',
+        before: info => `<div class="tip"><p class="title">${info}</p>`,
+        after: '</div>',
+      },
+    ],
   ]
 };
