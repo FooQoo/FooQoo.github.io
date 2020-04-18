@@ -41,7 +41,7 @@ module.exports = {
       copyright: [
         {
           text: "Powered by awesome vuepress themes and burst",
-          link: ""
+          link: "https://github.com/vuepressjs/awesome-vuepress#community-themes"
         }
       ]
     },
