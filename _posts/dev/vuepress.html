@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>VuePressでブログをはじめる</title>
+    <meta name="description" content="">
+    
+    
+    <link rel="preload" href="/assets/css/0.styles.17f32d1e.css" as="style"><link rel="preload" href="/assets/js/app.16d63d76.js" as="script"><link rel="preload" href="/assets/js/2.392a7d3b.js" as="script"><link rel="preload" href="/assets/js/5.0de764cc.js" as="script"><link rel="prefetch" href="/assets/js/3.bbe7dfbd.js"><link rel="prefetch" href="/assets/js/4.1d0cd1e9.js"><link rel="prefetch" href="/assets/js/6.35780848.js"><link rel="prefetch" href="/assets/js/7.62f0f046.js"><link rel="prefetch" href="/assets/js/8.81ca7cd1.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.17f32d1e.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <!----> </aside> <main class="page"> <div class="theme-default-content content__default"><p>今まで技術系の記事は<a href="https://qiita.com/FooQoo" target="_blank" rel="noopener noreferrer">Qiita<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>で投稿していたが、
+技術以外についても思ったことを書きたくて、ブログを作ってみた。<br>
+今後もアップデートすると思うので、多分この記事の文章はかなり雑。</p> <p>勤務先では、日々の資料作成に<a href="https://www.atlassian.com/ja/software/confluence" target="_blank" rel="noopener noreferrer">Confluence<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>を使っていて、<br>
+ツリー構造で記事を管理できる点や気軽にページを作成できる点、何より共有というよりは普段のメモとして利用できる点が気に入っている。
+なので、今回作成するブログも以上の点が満たされるようなものがいいなと思ったしだいです。</p> <p>あと、サーバ代がかからないとかスキル(Vue.jsなど)を生かせるようなものがいいとか考えた結果、<br> <em>vuepress + GitHub Pages</em> にたどり着いた。</p> <h2 id="vuepress"><a href="#vuepress" class="header-anchor">#</a> vuepress</h2> <p>vuepressのフォルダ構成については以下。</p> <ul><li><code>docs/.vuepress</code>: ページ全体の設定やコンポーネント、静的ファイルなどを置くところ</li> <li><code>docs/.vuepress/components</code>: ここに保存されたVueコンポーネントは自動的にグローバルなコンポーネントとして登録されます</li> <li><code>docs/.vuepress/theme</code>: 一部のページに適用するテーマファイルを保存します</li> <li><code>docs/.vuepress/styles</code>: スタイルファイルを保存します</li> <li><code>docs/.vuepress/index.styl</code>: 最も優先度が高く適用されるスタイルファイルを保存します。</li> <li><code>docs/.vuepress/palette.styl</code>: デフォルトで設定された色を上書きする？</li> <li><code>docs/.vuepress/public</code>: 静的ファイルのディレクトリ</li> <li><code>docs/.vuepress/templates</code>: HTMLファイル</li> <li><code>docs/.vuepress/templates/dev.html</code>: 開発環境のHTMLテンプレートファイル</li> <li><code>docs/.vuepress/templates/ssr.html</code>: サーバサイドレンダリングで使われるHTMLテンプレート</li> <li><code>docs/.vuepress/config.js</code>: Entry file?の設定ファイル</li> <li><code>docs/.vuepress/enhanceApp.js</code>: App level enhancement??</li></ul> <p>なんかいろいろ多いけど、nuxtみたいな感じ？</p> <p>コンフルのツリー構造を実装する場合は、<br>
+以下のように実装するのが良さそう。
+ちょうどこのブログのカテゴリーと同じ感じになる。</p> <div class="language-js extra-class"><pre class="language-js"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+    themeConfig<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        sidebar<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+            <span class="token punctuation">{</span>
+                title<span class="token punctuation">:</span> <span class="token string">'title'</span><span class="token punctuation">,</span>
+                collapsable<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+                children<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+                    <span class="token string">'to/your/children'</span>
+                <span class="token punctuation">]</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>あとは、ページをmarkdownで記述していけばブログとしての体が立つ。</p> <h2 id="github-pages"><a href="#github-pages" class="header-anchor">#</a> GitHub pages</h2> <p>知り合いはよく利用しているが自分は利用したことがなかった。<br>
+最初につまづいたのは、ファイルの置き方でvuepressがビルドしたファイルが <code>./docs/.vuepress/dist</code> に配置されることに気づくまでに少し時間を取られた。</p> <p>次に、GitHub pagesはmasterブランチを見るので、開発用ブランチ(developとか?)を用意して、そこにvuepressの開発環境を置いて、masterはビルド後のファイルのみ置くような感じにした。<br>
+ちょっと気持ち悪い気もするけど。</p> <p>ビルドとデプロイは <code>GitHub Actions</code> で行う。
+こちらは、以下のリポジトリが参考になりそう。</p> <p><a href="https://github.com/peaceiris/actions-gh-pages" target="_blank" rel="noopener noreferrer">peaceiris/actions-gh-pages<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <p>鍵の設定で少し時間取られたけど、最終的にはtypoが原因だった。
+(deploy_keyをdelopy_keyにしてた)</p> <p>そんなこんなで、ブログが完成?<br>
+これから頑張りたいなぁ</p> <p>2020/03/15 FooQoo</p></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.16d63d76.js" defer></script><script src="/assets/js/2.392a7d3b.js" defer></script><script src="/assets/js/5.0de764cc.js" defer></script>
+  </body>
+</html>
