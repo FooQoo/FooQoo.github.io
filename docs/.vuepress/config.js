@@ -104,8 +104,9 @@ module.exports = {
         'script',
         {},
         "window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);};gtag('js', new Date());gtag('config', 'UA-161520690-1');"
-    ]
-],
+    ],
+    ['link', { rel: "shortcut icon", href: " /favicon/favicon.ico"}],
+  ],
   plugins: [
     'geopattern',
     [
