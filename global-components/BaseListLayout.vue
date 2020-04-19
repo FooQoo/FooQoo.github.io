@@ -37,6 +37,7 @@ export default {
         const pages = this.$tag.list.filter(tag => {
           return tag.path === this.$route.path
         })[0].pages.slice().sort(this.compareDate)
+        
         return pages
       }
 

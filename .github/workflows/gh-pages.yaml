@@ -31,7 +31,7 @@ jobs:
             - run: yarn install
             - run: yarn docs:build    
 
-            - run: echo "fooqoo56.com" >> CNAME
+            - run: echo "fooqoo56.com" >> ./docs/.vuepress/dist/CNAME
 
             - name: deploy
               uses: peaceiris/actions-gh-pages@v3
