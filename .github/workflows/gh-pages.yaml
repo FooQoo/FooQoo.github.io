@@ -31,6 +31,8 @@ jobs:
             - run: yarn install
             - run: yarn docs:build    
 
+            - run: echo "fooqoo56.com" >> CNAME
+
             - name: deploy
               uses: peaceiris/actions-gh-pages@v3
               with:

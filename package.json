@@ -49,6 +49,7 @@
     "@vuepress/plugin-search": "1.0.0",
     "@vuepress/theme-blog": "^1.2.5",
     "bootstrap": "^4.3.1",
+    "cross-env": "^7.0.2",
     "element-ui": "^2.13.0",
     "remove-markdown": "^0.3.0",
     "vue-feather-icons": "^4.21.0",
