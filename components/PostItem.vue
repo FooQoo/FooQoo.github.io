@@ -18,7 +18,7 @@
             <small
               v-if="page.frontmatter.date"
               class="text-gray-light"
-            >{{new Date(page.frontmatter.date).toString().slice(4, 15)}}</small>
+            >{{page.frontmatter.date}}</small>
             <small class="ml-3">{{page.readingTime.text}}</small>
           </div>
         </div>
