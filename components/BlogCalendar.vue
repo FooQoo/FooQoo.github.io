@@ -18,45 +18,49 @@ export default {
   data() {
     return {
       attrs: null,
-      calendar: null,
+      calendar: null
     };
   },
   mounted() {
-    import("v-calendar").then((module) => {
+    import("v-calendar").then(module => {
       this.calendar = module.Calendar;
     });
   },
   computed: {
     schedule() {
-      const shedule = schedule.map((e) => {
+      const shedule = schedule.map(e => {
         return {
           highlight: "red",
           dates: new Date(e.year, e.month - 1, e.day),
           popover: {
-            label: e.label,
-          },
+            label: e.label
+          }
         };
       });
       const post = this.$site.pages
-        .filter((page) => {
+        .filter(page => {
           return (
             !page.path.startsWith("/tag/") &&
             !page.path.startsWith("/page/") &&
             page.path !== "/"
           );
         })
-        .map((page) => {
+        .map(page => {
+          const date = page.frontmatter.date
+            .split("-")
+            .map(e => parseInt(e, 10));
+          console.log(date);
           return {
             highlight: "blue",
-            dates: new Date(page.frontmatter.date),
+            dates: new Date(date[0], date[1] - 1, date[2]),
             popover: {
-              label: "ブログ投稿",
-            },
+              label: "ブログ投稿"
+            }
           };
         });
       return shedule.concat(post);
-    },
-  },
+    }
+  }
 };
 </script>
 
