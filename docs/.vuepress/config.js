@@ -8,12 +8,12 @@ module.exports = {
       {
         text: "Home",
         link: "/",
-        icon: "el-icon-house"
+        icon: "el-icon-house",
       },
       {
         text: "Projects",
         link: "/projects/",
-      }
+      },
     ],
     sitemap: true, // enables sitemap plugin
     hostname: "https://fooqoo56.com/", // required for sitemap
@@ -23,49 +23,49 @@ module.exports = {
       contact: [
         {
           type: "github",
-          link: "https://github.com/z3by"
+          link: "https://github.com/z3by",
         },
         {
           type: "instagram",
-          link: "#"
+          link: "#",
         },
         {
           type: "linkedin",
-          link: "#"
+          link: "#",
         },
         {
           type: "twitter",
-          link: "#"
-        }
+          link: "#",
+        },
       ],
       copyright: [
         {
           text: "Powered by awesome vuepress themes and burst",
-          link: "https://github.com/FooQoo/fooqoo.github.io"
-        }
-      ]
+          link: "https://github.com/FooQoo/fooqoo.github.io",
+        },
+      ],
     },
     personalInfo: {
-      nickname: 'FooQoo',
-      description: 'Web Engineer',
-      location: 'Tokyo, Japan',
+      nickname: "FooQoo",
+      description: "Web Engineer",
+      location: "Tokyo, Japan",
 
-      avatar: '/beluga.jpg',
+      avatar: "/beluga.jpg",
 
       sns: {
         github: {
-          account: 'fooqoo',
-          link: 'https://github.com/FooQoo',
+          account: "fooqoo",
+          link: "https://github.com/FooQoo",
         },
         facebook: {
-          account: 'satoshi fukuyama',
-          link: 'https://www.facebook.com/fooqoo56',
+          account: "satoshi fukuyama",
+          link: "https://www.facebook.com/fooqoo56",
         },
         twitter: {
-          account: 'fooqoo56',
-          link: 'https://twitter.com/FooQoo56',
-        }
-      }
+          account: "fooqoo56",
+          link: "https://twitter.com/FooQoo56",
+        },
+      },
     },
     infoCard: {
       headerBackground: {
@@ -76,46 +76,55 @@ module.exports = {
   },
   head: [
     [
-        'script',
-        {
-            'async src': '//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'
-        }
-    ],
-    [
-        'script',
-        {},
-        '(adsbygoogle = window.adsbygoogle = window.adsbygoogle || []).push({ google_ad_client: "ca-pub-1144207358103797", enable_page_level_ads: true  });'
-    ],
-    [
-        'link',
-        {
-            rel: 'stylesheet',
-            href: 'https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css'
-        }
-
-    ],
-    [
-        'script',
-        {
-            'async src': 'https://www.googletagmanager.com/gtag/js?id=UA-161520690-1'
-        }
-    ],
-    [
-        'script',
-        {},
-        "window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);};gtag('js', new Date());gtag('config', 'UA-161520690-1');"
-    ],
-    ['link', { rel: "shortcut icon", href: " /favicon/favicon.ico"}],
-  ],
-  plugins: [
-    'geopattern',
-    [
-      'vuepress-plugin-container',
+      "script",
       {
-        type: 'tip',
-        before: info => `<div class="tip"><p class="title">${info}</p>`,
-        after: '</div>',
+        "async src": "//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
       },
     ],
-  ]
+    [
+      "script",
+      {},
+      '(adsbygoogle = window.adsbygoogle = window.adsbygoogle || []).push({ google_ad_client: "ca-pub-1144207358103797", enable_page_level_ads: true  });',
+    ],
+    [
+      "link",
+      {
+        rel: "stylesheet",
+        href:
+          "https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css",
+      },
+    ],
+    [
+      "script",
+      {
+        "async src":
+          "https://www.googletagmanager.com/gtag/js?id=UA-161520690-1",
+      },
+    ],
+    [
+      "script",
+      {},
+      "window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);};gtag('js', new Date());gtag('config', 'UA-161520690-1');",
+    ],
+    ["link", { rel: "shortcut icon", href: " /favicon/favicon.ico" }],
+  ],
+  plugins: [
+    "geopattern",
+    [
+      "vuepress-plugin-container",
+      {
+        type: "tip",
+        before: (info) => `<div class="tip"><p class="title">${info}</p>`,
+        after: "</div>",
+      },
+    ],
+    [
+      "social-share",
+      {
+        networks: ["twitter", "facebook"],
+        autoQuote: true,
+        isPlain: false,
+      },
+    ],
+  ],
 };

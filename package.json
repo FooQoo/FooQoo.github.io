@@ -52,6 +52,7 @@
     "cross-env": "^7.0.2",
     "element-ui": "^2.13.0",
     "remove-markdown": "^0.3.0",
+    "v-calendar": "^1.0.0-beta.23",
     "vue-feather-icons": "^4.21.0",
     "vue-themify-icons": "^1.0.0",
     "vuepress-plugin-disqus": "^0.1.1",
@@ -66,7 +67,8 @@
   "devDependencies": {
     "conventional-changelog-cli": "^2.0.1",
     "eslint-config-sherry": "0.0.1",
-    "vuepress": "^1.0.0"
+    "vuepress": "^1.0.0",
+    "vuepress-plugin-social-share": "^0.2.1"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
