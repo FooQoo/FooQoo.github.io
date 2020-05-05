@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>vuepressでカレンダー埋め込みを実装 | FooQoo&#39;s memo</title>
+    <meta name="generator" content="VuePress 1.4.1">
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>(adsbygoogle = window.adsbygoogle = window.adsbygoogle || []).push({ google_ad_client: "ca-pub-1144207358103797", enable_page_level_ads: true  });</script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-161520690-1"></script>
+    <script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);};gtag('js', new Date());gtag('config', 'UA-161520690-1');</script>
+    <link rel="shortcut icon" href=" /favicon/favicon.ico">
+    <meta name="description" content="日常生活の気付きをメモします">
+    <meta property="article:published_time" content="2020-05-05T00:00:00.000Z">
+    <meta property="og:site_name" content="FooQoo's memo">
+    <meta property="og:title" content="vuepressでカレンダー埋め込みを実装">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="/_posts/dev/vue-calnedar-2020-0505.html">
+    <meta property="og:image" content="/calendar.jpg">
+    <meta name="twitter:title" content="vuepressでカレンダー埋め込みを実装">
+    <meta name="twitter:url" content="/_posts/dev/vue-calnedar-2020-0505.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="/calendar.jpg">
+    <meta name="twitter:label2" content="Filed under">
+    <meta name="twitter:data2" content="開発">
+    <meta property="article:tag" content="開発">
+    <link rel="preload" href="/assets/css/0.styles.07f75781.css" as="style"><link rel="preload" href="/assets/js/app.0130e5dd.js" as="script"><link rel="preload" href="/assets/js/4.ecf24874.js" as="script"><link rel="preload" href="/assets/js/13.6452a968.js" as="script"><link rel="preload" href="/assets/js/6.edf3819a.js" as="script"><link rel="prefetch" href="/assets/js/1.1b01a7bd.js"><link rel="prefetch" href="/assets/js/10.97ef7574.js"><link rel="prefetch" href="/assets/js/11.799e2b15.js"><link rel="prefetch" href="/assets/js/12.c5cb60a8.js"><link rel="prefetch" href="/assets/js/14.8f66106a.js"><link rel="prefetch" href="/assets/js/15.f0a0253e.js"><link rel="prefetch" href="/assets/js/16.6dd91c4d.js"><link rel="prefetch" href="/assets/js/17.0a7c1e37.js"><link rel="prefetch" href="/assets/js/5.95456da5.js"><link rel="prefetch" href="/assets/js/7.4706db29.js"><link rel="prefetch" href="/assets/js/8.4a1e7b98.js"><link rel="prefetch" href="/assets/js/9.2f9cfc37.js"><link rel="prefetch" href="/assets/js/vuejs-paginate.4e22fb41.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.07f75781.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div id="vuperess-theme-blog__global-layout"><header data-v-493c9fac><nav class="navbar py-3 d-flex navbar-light border-0 container" data-v-493c9fac><a href="/" class="navbar-brand font-serif font-weight-bold router-link-active" data-v-493c9fac>FooQoo's memo
+    </a> <div class="search-box" data-v-493c9fac><input aria-label="Search" autocomplete="off" spellcheck="false" value="" class="focused"> <!----></div></nav> <nav class="navbar navbar-light border-0 container x-overflow-scroll" data-v-493c9fac><ul class="navbar-nav mx-auto d-flex flex-row" data-v-493c9fac><li class="text-uppercase mx-2" data-v-493c9fac><a href="/" class="nav-link text-nowrap  router-link-active" data-v-493c9fac>
+        HOME
+        </a></li> <li class="text-uppercase mx-2" data-v-493c9fac><a href="/tag/開発/" class="nav-link text-nowrap " data-v-493c9fac>
+          開発
+        </a></li><li class="text-uppercase mx-2" data-v-493c9fac><a href="/tag/ライフスタイル/" class="nav-link text-nowrap " data-v-493c9fac>
+          ライフスタイル
+        </a></li></ul></nav></header> <div class="container"><div id="vuperess-theme-blog__post-layout"><div class="vuepress-blog-theme-content mt-5"><div class="my-5"><h1 class="h1 my-3 font-weight-light font-serif">vuepressでカレンダー埋め込みを実装</h1></div> <div class="content__default"><p>vuepress は、vue.js のコンポーネントを入れることができるとのことで、早速カレンダーを導入した。</p> <p>ライブラリは、<a href="https://vcalendar.io/" target="_blank" rel="noopener noreferrer">vue-calendar<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>である。
+UI は以下の感じで、markdown に直接 <code>&lt;BlogCalendar /&gt;</code> を埋め込むことで下のようなカレンダーが表示される。</p> <!----> <p>実装としては以下の手順を踏めばおーけー</p> <div class="tip"><p class="title">私の実装手順</p><ol><li><code>.vuepress/public</code>配下にカレンダー用の<code>vue</code>ファイルを作成する。</li> <li><code>.vuepress/enhanceApp.js</code>に作成した<code>vue</code>ファイルを登録する。</li> <li>予定表をまとめた<code>json</code>ファイルを<code>.vuepress/public</code>配下に作成する。</li></ol></div><p>追加したソースコードは以下。</p> <ul><li>BlogCalendar.vue</li></ul> <div class="language-vue extra-class"><pre class="language-vue"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>component</span>
+      <span class="token attr-name">v-if</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>calendar<span class="token punctuation">&quot;</span></span>
+      <span class="token attr-name">:is</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>calendar<span class="token punctuation">&quot;</span></span>
+      <span class="token attr-name">is-expanded</span>
+      <span class="token attr-name">:attributes</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>attrs<span class="token punctuation">&quot;</span></span>
+    <span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>component</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+<span class="token keyword">import</span> schedule <span class="token keyword">from</span> <span class="token string">&quot;../public/schedule.json&quot;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  name<span class="token operator">:</span> <span class="token string">&quot;BlogCalendar&quot;</span><span class="token punctuation">,</span>
+  <span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      attrs<span class="token operator">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">getSchedule</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      calendar<span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function">mounted</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">import</span><span class="token punctuation">(</span><span class="token string">&quot;v-calendar&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">module</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>calendar <span class="token operator">=</span> module<span class="token punctuation">.</span>Calendar<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  methods<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token function-variable function">getSchedule</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> schedule<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token punctuation">{</span>
+          highlight<span class="token operator">:</span> <span class="token punctuation">{</span>
+            animated<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+            height<span class="token operator">:</span> <span class="token string">&quot;1.8rem&quot;</span><span class="token punctuation">,</span>
+            backgroundColor<span class="token operator">:</span> <span class="token string">&quot;red&quot;</span><span class="token punctuation">,</span>
+            borderColor<span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+            borderWidth<span class="token operator">:</span> <span class="token string">&quot;1px&quot;</span><span class="token punctuation">,</span>
+            borderStyle<span class="token operator">:</span> <span class="token string">&quot;solid&quot;</span><span class="token punctuation">,</span>
+            borderRadius<span class="token operator">:</span> <span class="token string">&quot;1.8rem&quot;</span><span class="token punctuation">,</span>
+            opacity<span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          dates<span class="token operator">:</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span>e<span class="token punctuation">.</span>year<span class="token punctuation">,</span> e<span class="token punctuation">.</span>month <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">,</span> e<span class="token punctuation">.</span>day<span class="token punctuation">)</span><span class="token punctuation">,</span>
+          popover<span class="token operator">:</span> <span class="token punctuation">{</span>
+            label<span class="token operator">:</span> e<span class="token punctuation">.</span>label<span class="token punctuation">,</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span> <span class="token attr-name">scoped</span><span class="token punctuation">&gt;</span></span><span class="token style"><span class="token language-css">
+<span class="token selector">.cell-content</span> <span class="token punctuation">{</span>
+  <span class="token property">text-align</span><span class="token punctuation">:</span> left<span class="token punctuation">;</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 70px<span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> 50px<span class="token punctuation">;</span>
+  <span class="token property">font-size</span><span class="token punctuation">:</span> 50%<span class="token punctuation">;</span>
+  <span class="token comment">/* border: 1px solid #efefef; */</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.cell-content-line</span> <span class="token punctuation">{</span>
+  <span class="token property">border-bottom</span><span class="token punctuation">:</span> 1px solid #efefef<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><ul><li>enhanceApp.js</li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> BlogCalendar <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;./components/BlogCalendar.vue&quot;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> Vue<span class="token punctuation">,</span> options<span class="token punctuation">,</span> router<span class="token punctuation">,</span> siteData <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  Vue<span class="token punctuation">.</span><span class="token function">component</span><span class="token punctuation">(</span><span class="token string">&quot;BlogCalendar&quot;</span><span class="token punctuation">,</span> BlogCalendar<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  Vue<span class="token punctuation">.</span>config<span class="token punctuation">.</span>productionTip <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><ul><li>schedule.json</li></ul> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">[</span>
+  <span class="token punctuation">{</span>
+    <span class="token property">&quot;year&quot;</span><span class="token operator">:</span> <span class="token number">2020</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;month&quot;</span><span class="token operator">:</span> <span class="token number">5</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;day&quot;</span><span class="token operator">:</span> <span class="token number">6</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;label&quot;</span><span class="token operator">:</span> <span class="token string">&quot;誕生日&quot;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">]</span>
+</code></pre></div><p>注意点としては、<code>v-calendar</code>は SSR に対応してないこと。<br>
+vuepress の build は全て SSR なため、単に import しただけだと build がこける。</p> <p>これを防ぐために、<code>v-calendar</code>はクライアント側で動的に compornent が呼ばれるようにしなければならない。
+このやり方については、<a href="https://v1.vuepress.vuejs.org/guide/using-vue.html#browser-api-access-restrictions" target="_blank" rel="noopener noreferrer">Using Vue in Markdown<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>に詳しく書いてある。</p> <p>作って思ったのが、わざわざ markdown に埋め込ませる必要はなかったかなと笑</p> <!----> <p>2020/5/5 FooQoo</p></div> <hr> <!----></div></div></div> <footer class="footer" data-v-77ebd31c><div class="footer-right-wrap" data-v-77ebd31c><ul class="copyright" data-v-77ebd31c><li class="copyright-item" data-v-77ebd31c><a href="https://github.com/FooQoo/fooqoo.github.io" target="_blank" rel="noopener noreferrer" class="nav-link external" data-v-77ebd31c>Powered by awesome vuepress themes and burst</a></li></ul></div></footer></div><div class="global-ui"><div class="reading-progress top" data-v-21b39eda><div class="progress" data-v-21b39eda></div></div><!----></div></div>
+    <script src="/assets/js/app.0130e5dd.js" defer></script><script src="/assets/js/4.ecf24874.js" defer></script><script src="/assets/js/13.6452a968.js" defer></script><script src="/assets/js/6.edf3819a.js" defer></script>
+  </body>
+</html>
