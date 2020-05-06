@@ -2,7 +2,7 @@
   <header>
     <nav class="navbar py-3 d-flex navbar-light border-0 container">
       <router-link class="navbar-brand" to="/">
-        <h1 class="display-4 font-serif font-weight-bold">{{ $site.title }}</h1>
+        <h1 class="font-serif font-weight-bold">{{ $site.title }}</h1>
       </router-link>
 
       <SearchBox />
@@ -11,18 +11,10 @@
     <nav class="navbar navbar-light border-0 container x-overflow-scroll">
       <ul class="navbar-nav mx-auto d-flex flex-row">
         <li class="text-uppercase mx-2">
-          <router-link class="nav-link text-nowrap " to="/">
-            HOME
-          </router-link>
+          <router-link class="nav-link text-nowrap" to="/">HOME</router-link>
         </li>
-        <li
-          class="text-uppercase mx-2"
-          v-for="tag in $tag.list"
-          :key="tag.name"
-        >
-          <router-link class="nav-link text-nowrap " :to="tag.path">
-            {{ tag.name }}
-          </router-link>
+        <li class="text-uppercase mx-2" v-for="tag in $tag.list" :key="tag.name">
+          <router-link class="nav-link text-nowrap" :to="tag.path">{{ tag.name }}</router-link>
         </li>
       </ul>
     </nav>
@@ -33,7 +25,7 @@
 import SearchBox from "./SearchBox";
 
 export default {
-  components: { SearchBox },
+  components: { SearchBox }
 };
 </script>
 
