@@ -51,7 +51,7 @@ module.exports = {
       location: "Tokyo, Japan",
 
       avatar:
-        "https://res.cloudinary.com/fooqoo/image/upload/c_scale,f_auto,h_120,q_auto:low,w_120/v1588754816/fooqoo%20memo/beluga_jwpply.jpg",
+        "https://res.cloudinary.com/fooqoo/image/upload/c_scale,f_auto,h_240,q_auto:low,w_240/v1588754816/fooqoo%20memo/beluga_jwpply.jpg",
 
       sns: {
         github: {
