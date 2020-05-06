@@ -1,14 +1,7 @@
 <template>
   <div class="info-card">
-    <div
-      class="info-card-header"
-      :style="headerStyle"
-    >
-      <img
-        class="info-avatar"
-        :src="avatar"
-        :alt="nickname"
-      >
+    <div class="info-card-header" :style="headerStyle">
+      <img class="info-avatar" :src="avatar" :alt="nickname" />
     </div>
 
     <div class="info-card-body">
@@ -17,19 +10,11 @@
       </section>
 
       <!-- eslint-disable vue/no-v-html -->
-      <section
-        v-if="description"
-        class="info-desc"
-        v-html="description"
-      />
+      <section v-if="description" class="info-desc" v-html="description" />
       <!-- eslint-enable vue/no-v-html -->
       <section class="info-contact">
         <section v-if="location">
-          <IconInfo
-            class="info-location"
-            type="location"
-            :title="location"
-          >
+          <IconInfo class="info-location" type="location" :title="location">
             {{ location }}
           </IconInfo>
         </section>
@@ -54,14 +39,10 @@
             {{ email }}
           </IconInfo>
         </section>
-        
       </section>
     </div>
 
-    <div
-      v-if="sns"
-      class="info-card-footer"
-    >
+    <div v-if="sns" class="info-card-footer">
       <section class="info-sns clearfix">
         <a
           v-for="(item, name) of sns"
@@ -69,12 +50,9 @@
           :href="item.link"
           class="sns-link"
           target="_blank"
+          rel="noreferrer"
         >
-          <IconSns
-            :name="name"
-            :account="item.account"
-            size="1.5em"
-          />
+          <IconSns :name="name" :account="item.account" size="1.5em" />
         </a>
       </section>
     </div>
@@ -82,12 +60,12 @@
 </template>
 
 <script>
-import GeoPattern from 'geopattern'
-import IconInfo from '../components/IconInfo'
-import IconSns from '../components/IconSns'
+import GeoPattern from "geopattern";
+import IconInfo from "../components/IconInfo";
+import IconSns from "../components/IconSns";
 
 export default {
-  name: 'InfoCard',
+  name: "InfoCard",
 
   components: {
     IconInfo,
@@ -95,73 +73,73 @@ export default {
   },
 
   computed: {
-    info () {
-      return this.$themeConfig.personalInfo || {}
+    info() {
+      return this.$themeConfig.personalInfo || {};
     },
 
-    nickname () {
-      return this.info.nickname || 'Unknown'
+    nickname() {
+      return this.info.nickname || "Unknown";
     },
 
-    description () {
-      return this.info.description || null
+    description() {
+      return this.info.description || null;
     },
 
-    location () {
-      return this.info.location || null
+    location() {
+      return this.info.location || null;
     },
 
-    email () {
-      return this.info.email || null
+    email() {
+      return this.info.email || null;
     },
 
-    organization () {
-      return this.info.organization || null
+    organization() {
+      return this.info.organization || null;
     },
 
-    avatar () {
-      return this.info.avatar || '/assets/img/avatar_unknown.jpg'
+    avatar() {
+      return this.info.avatar || "/assets/img/avatar_unknown.jpg";
     },
 
-    sns () {
-      return this.info.sns || null
+    sns() {
+      return this.info.sns || null;
     },
 
-    headerBackgroundConfig () {
-      return this.$themeConfig.infoCard.headerBackground || {}
+    headerBackgroundConfig() {
+      return this.$themeConfig.infoCard.headerBackground || {};
     },
 
-    headerBackgroundImg () {
-      return this.headerBackgroundConfig.url || null
+    headerBackgroundImg() {
+      return this.headerBackgroundConfig.url || null;
     },
 
-    headerStyle () {
+    headerStyle() {
       if (this.headerBackgroundImg) {
         return {
-          'background-size': 'cover',
-          'background-repeat': 'no-repeat',
-          'background-position': 'center',
-          'background-attachment': 'scroll',
-          'background-image': `url(${this.headerBackgroundImg})`,
-        }
-      }
-      
-      if (!this.$ssrContext && this.headerBackgroundConfig.useGeo !== false) {
-        return {
-          'background-image': this.gpImg(),
-        }
+          "background-size": "cover",
+          "background-repeat": "no-repeat",
+          "background-position": "center",
+          "background-attachment": "scroll",
+          "background-image": `url(${this.headerBackgroundImg})`,
+        };
       }
 
-      return {}
+      if (!this.$ssrContext && this.headerBackgroundConfig.useGeo !== false) {
+        return {
+          "background-image": this.gpImg(),
+        };
+      }
+
+      return {};
     },
   },
-  
+
   methods: {
-    gpImg () {
-      return GeoPattern.generate(this.nickname, { color: '#eee' }).toDataUrl()
+    gpImg() {
+      return GeoPattern.generate(this.nickname, { color: "#eee" }).toDataUrl();
     },
   },
-}
+};
 </script>
 
 <style lang="stylus" scoped>
@@ -210,5 +188,4 @@ $avatarHeight = 120px
   .info-card-footer
     text-align center
     padding 1rem
-
 </style>
