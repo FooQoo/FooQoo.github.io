@@ -184,18 +184,18 @@ export default {
   input {
     cursor: text;
     width: 0rem;
-    height: 3rem;
+    height: 2.5rem;
     color: lighten($textColor, 25%);
     display: inline-block;
     border: none;
     border-radius: 2rem;
     font-size: 0.9rem;
     line-height: 2rem;
-    padding: 0 0.5rem 0 2rem;
+    padding: 0 0.5rem 0 4rem;
     outline: none;
     transition: all 0.3s ease-out;
     background: #fff url('../assets/search.svg') 0.6rem 0.5rem no-repeat;
-    background-size: 1rem;
+    background-size: 1.5rem;
 
     &:focus {
       cursor: auto;
