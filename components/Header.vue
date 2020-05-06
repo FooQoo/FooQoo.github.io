@@ -2,7 +2,7 @@
   <header>
     <nav class="navbar py-3 d-flex navbar-light border-0 container">
       <router-link class="navbar-brand" to="/">
-        <h1 class="font-serif font-weight-bold">{{ $site.title }}</h1>
+        <h1 class="display-4 font-serif font-weight-bold">{{ $site.title }}</h1>
       </router-link>
 
       <SearchBox />
