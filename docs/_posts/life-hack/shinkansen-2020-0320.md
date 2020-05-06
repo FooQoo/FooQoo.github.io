@@ -17,7 +17,7 @@ noGlobalSocialShare: true
 
 とはいえ、福井と東京の運賃は想像以上に高い。
 
-<iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d1665720.088885838!2d136.6424595801189!3d35.37153744676324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e3!4m5!1s0x5ff8beed32739c57%3A0x5b241c3c7faf0f59!2z44CSOTEwLTAwMDYg56aP5LqV55yM56aP5LqV5biC5Lit5aSu77yR5LiB55uu77yRIOemj-S6lemnhQ!3m2!1d36.0621258!2d136.2232754!4m5!1s0x60188bfbd89f700b%3A0x277c49ba34ed38!2z5p2x5Lqs6YO95Y2D5Luj55Sw5Yy65Li444Gu5YaF77yR5LiB55uuIOadseS6rOmnhQ!3m2!1d35.6812362!2d139.7671248!5e0!3m2!1sja!2sjp!4v1588756478567!5m2!1sja!2sjp" width="680" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+<iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d1665720.088885838!2d136.6424595801189!3d35.37153744676324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e3!4m5!1s0x5ff8beed32739c57%3A0x5b241c3c7faf0f59!2z44CSOTEwLTAwMDYg56aP5LqV55yM56aP5LqV5biC5Lit5aSu77yR5LiB55uu77yRIOemj-S6lemnhQ!3m2!1d36.0621258!2d136.2232754!4m5!1s0x60188bfbd89f700b%3A0x277c49ba34ed38!2z5p2x5Lqs6YO95Y2D5Luj55Sw5Yy65Li444Gu5YaF77yR5LiB55uuIOadseS6rOmnhQ!3m2!1d35.6812362!2d139.7671248!5e0!3m2!1sja!2sjp!4v1588756478567!5m2!1sja!2sjp" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 
 参考: GoogleMap
 
