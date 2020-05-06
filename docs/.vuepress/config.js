@@ -127,6 +127,7 @@ module.exports = {
         isPlain: false,
       },
     ],
+    ["@vuepress/pwa"],
   ],
   meta: [
     { charset: "utf-8" },
