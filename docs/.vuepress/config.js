@@ -108,6 +108,11 @@ module.exports = {
       "window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);};gtag('js', new Date());gtag('config', 'UA-161520690-1');",
     ],
     ["link", { rel: "shortcut icon", href: " /favicon/favicon.ico" }],
+    [
+      "meta",
+      { name: "viewport", content: "width=device-width, initial-scale=1" },
+    ],
+    ["meta", { charset: "utf-8" }],
   ],
   plugins: [
     "geopattern",
@@ -128,9 +133,5 @@ module.exports = {
       },
     ],
     ["@vuepress/pwa"],
-  ],
-  meta: [
-    { charset: "utf-8" },
-    { name: "viewport", content: "width=device-width, initial-scale=1" },
   ],
 };
