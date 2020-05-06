@@ -3,7 +3,7 @@ date: 2020-5-5
 tags:
   - 開発
 title: vuepressでカレンダー埋め込みを実装
-image: https://res.cloudinary.com/fooqoo/image/upload/c_scale,f_auto,h_100,q_auto:low,w_150/v1588754812/fooqoo%20memo/calendar_m806ng.jpg
+image: https://res.cloudinary.com/fooqoo/image/upload/c_scale,f_auto,h_200,q_auto:low,w_300/v1588754812/fooqoo%20memo/calendar_m806ng.jpg
 featured: true
 popular: true
 readingTime: { text: "1 min read" }
