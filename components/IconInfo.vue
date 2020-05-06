@@ -1,59 +1,49 @@
 <script>
-import Icon from '../components/Icon'
+import Icon from "../components/Icon";
 
 export default {
-  name: 'IconInfo',
+  name: "IconInfo",
 
   functional: true,
 
   components: {
-    Icon,
+    Icon
   },
 
   props: {
     href: {
       type: String,
       required: false,
-      default: null,
+      default: null
     },
 
     size: {
       type: String,
       required: false,
-      default: '1em',
+      default: "1em"
     },
 
     title: {
       type: String,
       required: false,
-      default: null,
+      default: null
     },
 
     type: {
       type: String,
-      required: true,
-    },
+      required: true
+    }
   },
 
-  render (h, { props: { href, size, title, type }, children }) {
-    const Component = href ? 'a' : 'span'
+  render(h, { props: { href, size, title, type }, children }) {
+    const Component = href ? "a" : "span";
     return (
-      <Component
-        href={href}
-        title={title}
-      >
-        <Icon
-          class="info-icon"
-          name={type}
-          size={size}
-          title={title}
-        />
+      <Component href={href} title={title} rel="noreferrer">
+        <Icon class="info-icon" name={type} size={size} title={title} />
 
-        <span class="info-text">
-          { children }
-        </span>
+        <span class="info-text">{children}</span>
       </Component>
-    )
-  },
-}
+    );
+  }
+};
 </script>
