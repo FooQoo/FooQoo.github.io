@@ -49,7 +49,6 @@ export default {
           const date = page.frontmatter.date
             .split("-")
             .map(e => parseInt(e, 10));
-          console.log(date);
           return {
             highlight: "blue",
             dates: new Date(date[0], date[1] - 1, date[2]),
