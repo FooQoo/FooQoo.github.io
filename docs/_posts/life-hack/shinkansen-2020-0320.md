@@ -1,7 +1,7 @@
 ---
 date: 2020-3-20
 tags:
-  - ライフスタイル
+  - ライフハック
 title: 福井-東京間の帰省コストをハックする
 image: https://res.cloudinary.com/fooqoo/image/upload/c_scale,f_auto,h_200,q_auto:low,w_300/v1588754810/fooqoo%20memo/train_qu1zgb.jpg
 featured: true

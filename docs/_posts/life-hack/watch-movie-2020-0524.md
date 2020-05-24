@@ -1,7 +1,7 @@
 ---
 date: 2020-5-25
 tags:
-  - ライフスタイル
+  - ライフハック
 title: 自粛期間はAmazon Prime三昧
 image: https://res.cloudinary.com/fooqoo/image/upload/c_scale,f_auto,h_200,q_auto:low,w_300/v1590332370/fooqoo%20memo/three-woman-watch-a-glowing-white-screen-in-a-dark-room_ntxv9r.jpg
 featured: true
