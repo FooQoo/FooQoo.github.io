@@ -8,6 +8,7 @@ featured: true
 popular: true
 readingTime: { text: "5 min read" }
 noGlobalSocialShare: true
+summary: "私は現在東京在住ですが、地元は北陸地方の福井県です。そんな私の帰省ハックについてご紹介します。"
 ---
 
 私は現在都内に住んでいるが、実家は北陸の福井県にある。

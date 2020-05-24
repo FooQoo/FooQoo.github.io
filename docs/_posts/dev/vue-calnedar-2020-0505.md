@@ -8,6 +8,7 @@ featured: true
 popular: true
 readingTime: { text: "1 min read" }
 noGlobalSocialShare: true
+summary: "vuepressではVueコンポーネントを内蔵できるので、今回はカレンダーモジュールをブログ内に導入しました。"
 ---
 
 vuepress は、vue.js のコンポーネントを入れることができるとのことで、早速カレンダーを導入した。
