@@ -1,5 +1,5 @@
 ---
-date: 2020-5-5
+date: 2020-5-05
 tags:
   - 開発
 title: vuepressでカレンダー埋め込みを実装
