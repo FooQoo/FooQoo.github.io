@@ -2,11 +2,7 @@
   <div id="base-list-layout" class="fill-height">
     <div class="row my-5 justify-content-between">
       <div class="col-md-12 col-lg-7">
-        <post-item
-          v-for="page in pages"
-          :key="page.key"
-          :page="page"
-        ></post-item>
+        <post-item v-for="page in pages" :key="page.key" :page="page"></post-item>
       </div>
       <div class="col-md-12 col-lg-4">
         <info-card />
@@ -46,7 +42,8 @@ export default {
           return (
             !page.path.startsWith("/tag/") &&
             !page.path.startsWith("/page/") &&
-            page.path !== "/"
+            page.path !== "/" &&
+            !(page.frontmatter.tags || []).some((tag) => tag === "日記")
           );
         })
         .slice()
