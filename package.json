@@ -59,8 +59,8 @@
     "vuepress-plugin-geopattern": "^0.1.2",
     "vuepress-plugin-reading-progress": "^1.0.7",
     "vuepress-plugin-reading-time": "^0.1.1",
-    "vuepress-plugin-seo": "^0.1.2",
-    "vuepress-plugin-sitemap": "^2.1.2",
+    "vuepress-plugin-seo": "^0.1.4",
+    "vuepress-plugin-sitemap": "^2.3.1",
     "vuepress-plugin-smooth-scroll": "^0.0.4",
     "vuepress-theme-vuetify": "^1.0.0"
   },
