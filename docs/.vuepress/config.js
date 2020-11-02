@@ -1,5 +1,5 @@
 module.exports = {
-  title: "FooQoo's memo",
+  title: "FooQoo memo",
   description: "日常生活の気付きをメモします",
   theme: require.resolve("../../"),
   themeConfig: {
