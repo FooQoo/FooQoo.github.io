@@ -1,6 +1,6 @@
 ---
 date: 2020-11-2
-title: FooQoo Memo
+title: FooQoo's memo
 image: https://res.cloudinary.com/fooqoo/image/upload/c_scale,f_auto,h_400,q_auto:low,w_400/v1588754816/fooqoo%20memo/beluga_jwpply.jpg
 featured: true
 popular: true

@@ -1,5 +1,5 @@
 module.exports = {
-  title: "FooQoo memo",
+  title: "FooQoo's memo",
   description: "日常生活の気付きをメモします",
   theme: require.resolve("../../"),
   themeConfig: {
@@ -17,7 +17,7 @@ module.exports = {
     ],
     sitemap: true, // enables sitemap plugin
     hostname: "https://fooqoo56.com/", // required for sitemap
-    disqus: "fooqoo memo", // if you want to incorporate Disqus for comments replace this value else just get rid of it
+    disqus: "FooQoo's memo", // if you want to incorporate Disqus for comments replace this value else just get rid of it
     googleAnalytics: "", // Google Analytics tracking ID
     footer: {
       contact: [
@@ -137,7 +137,7 @@ module.exports = {
       'seo',
       {
         siteTitle: (_, $site) => $site.title,
-        title: $page => $page.title,
+        title: $page => $page.title || "FooQoo's memo",
         description: $page => $page.frontmatter.description,
         author: (_, $site) => $site.themeConfig.author,
         tags: $page => $page.frontmatter.tags,
