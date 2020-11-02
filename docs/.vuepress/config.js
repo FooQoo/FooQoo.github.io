@@ -144,7 +144,7 @@ module.exports = {
         twitterCard: _ => 'summary_large_image',
         type: $page => ['articles', 'posts', 'blog'].some(folder => $page.regularPath.startsWith('/' + folder)) ? 'article' : 'website',
         url: (_, $site, path) => ($site.themeConfig.domain || '') + path,
-        image: ($page, $site) => $page.frontmatter.image && (($site.themeConfig.domain && !$page.frontmatter.image.startsWith('http') || '') + $page.frontmatter.image) || "https://res.cloudinary.com/fooqoo/image/upload/c_scale,f_auto,h_400,q_auto:low,w_400/v1588754816/fooqoo%20memo/beluga_jwpply.jpg",
+        image: ($page, $site) => $page.frontmatter.image && (($site.themeConfig.domain && !$page.frontmatter.image.startsWith('http') || '') + $page.frontmatter.image) || "https://res.cloudinary.com/fooqoo/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1588754816/fooqoo%20memo/beluga_jwpply.jpg",
         publishedAt: $page => $page.frontmatter.date && new Date($page.frontmatter.date),
         modifiedAt: $page => $page.lastUpdated && new Date($page.lastUpdated),
       }
