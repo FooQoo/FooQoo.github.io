@@ -1,4 +1,4 @@
-FooQoo's memo
+FooQoo memo
 
 Powered by 
 - [z3by/vuepress-theme-medium](https://github.com/z3by/vuepress-theme-medium)
